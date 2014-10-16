@@ -1,0 +1,5 @@
+16/10 - Day 1
+- //Começei a aprender sobre bootstrap
+- //Tentarei criar a página inicial me baseando na interface do Facebook
+- >>> LEMBRAR DE REALIZAR TESTES NOS FORMS E CRIAR FORMAS DE VERIFICAÇÃO <<<
+- //Bootstrap oferece uma interface de "validation" e "alert" muito bonita

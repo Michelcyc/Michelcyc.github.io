@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>iFPS - Plano de voo</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-combobox.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- REALIZAR CHECK DE LOGIN -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-combobox.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.combobox').combobox();
+      });
+    </script>
+    <!-- REALIZAR CHECK DE LOGIN -->
+
+    <!-- NAV de LOGADO -->
+        <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="menu.html">Usuário</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Plano de voo <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="fill_fpl.html">FPL - Plano de voo completo</a></li>
+                <li class="divider"></li>
+                <li><a href="fill_ntf.html">NTF - Plano de voo simplificado</a></li>
+                <li class="divider"></li>
+                <li><a href="fill_chg.html">CHG - Mudança</a></li>
+                <li><a href="fill_dla.html">DLA - Prorrogação</a></li>
+                <li><a href="fill_cnl.html">CNL - Cancelamento</a></li>
+                <li><a href="fill_ise.html">ISE - Isenção</a></li>
+              </ul>
+            </li>
+            <li><a href="msgs_status.html">Estado das requisições</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Mais <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="help.html">Ajuda</a></li>
+                <li><a href="config.html">Configurações</a></li>
+                <li class="divider"></li>
+                <li><a href="logout.html">Sair</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="row">
+      <div class="col-lg-4"><div class="text-center">
+        <form role="form">
+          <div class="form-group">
+            <input type="text" class="form-control" id="aircraft_name" placeholder="Matricula da aeronave">
+            <input type="text" class="form-control" id="departure" placeholder="Aeródromo de origem">
+            <input type="text" class="form-control" id="arrival" placeholder="Aeródromo de destino">
+            <fieldset>
+              <select class="combobox" id="flight_rule">
+                <option></option>
+                <option value="">Regra de voo</option>
+                <option value="V">V-Visual</option>
+                <option value="I">I-Instrumento</option>
+                <option value="Y">Y-Instrumento-Visual</option>
+                <option value="Z">Z-Visual-Instrumento</option>
+              </select>
+            </fieldset>
+            <input type="text" class="form-control" id="time_of_departure" placeholder="Horário de decolagem">
+            <input type="text" class="form-control" id="alternative" placeholder="Aeródromo de alternativa">
+            <input type="text" class="form-control" id="alternative2" placeholder="Aeródromo de alternativa 2">
+            <input type="text" class="form-control" id="autonomy" placeholder="Autonomia">
+            <input type="text" class="form-control" id="pob" placeholder="Pessoas a bordo">
+          </div>
+        </form>
+      </div></div>
+      <div class="col-lg-4"><div class="text-center">
+        <form role="form">
+          <div class="form-group">
+            <fieldset>
+              <select class="combobox" id="flight_rule">
+                <option></option>
+                <option value="">Tipo de Voo</option>
+                <option value="S">S-Transporte aéreo regular</option>
+                <option value="N">N-Transporte aéreo não regular</option>
+                <option value="G">G-Aviação geral</option>
+                <option value="M">M-Aeronave militar</option>
+                <option value="X">X-Outros</option>
+              </select> 
+            </fieldset>
+            <input type="text" class="form-control" id="phone" placeholder="Telefone">
+            <input type="text" class="form-control" id="from" placeholder="Última procedência">
+            <input type="text" class="form-control" id="others" placeholder="Outros">
+            <p>Rota</p>
+            <input type="text" class="form-control" id="time_of_flight" placeholder="Tempo de voo">
+            <input type="text" class="form-control" id="speed" placeholder="Velocidade">
+            <input type="text" class="form-control" id="flight_level" placeholder="Nível de voo">
+            <textarea type="text" class="form-control" id="route" placeholder="Rota"></textarea>
+          </div>
+        </form>
+      </div></div>
+      <div class="col-lg-4"><div class="text-center">
+        <p>Aeronave</p>
+        <form role="form">
+          <div class="form-group">
+            <input type="text" class="form-control" id="aircraft_type" placeholder="Tipo de aeronave">
+            <select class="combobox" id="turbulence">
+              <option></option>
+              <option value="">Esteira de turbulência</option>
+              <option value="L">H-Pesada</option>
+              <option value="M">M-Média</option>
+              <option value="L">L-Leve</option>
+            </select>
+            <select class="combobox" id="equip">
+              <option></option>
+              <option value="">Equipamentos</option>
+              <option value="S">S-Possui equipamentos exigidos para a rota</option>
+              <option value="N">N-Não possui equipamentos exigidos para a rota</option>
+            </select>
+            <select class="combobox" id="complement"> <!-- Aplicar função aqui para pegar as letras e juntar no próximo canto -->
+              <option></option>
+              <option value="">Complemento aos equipamentos</option>
+              <option value="A">A|Sistema de pouso GBAS</option>
+              <option value="B">B|LPV (APV com SBAS)</option>
+              <option value="C">C|LORAN C</option>
+              <option value="D">D|DME</option>
+              <option value="E1">E1|FMC WPR ACARS</option>
+              <option value="E2">E2|D-FIS ACARS</option>
+              <option value="E3">E3|PDC ACARS</option>
+              <option value="F">F|ADF</option>
+              <option value="G">G|(-GNSS-)</option>
+              <option value="H">H|HF RTF</option>
+
+
+            </select>
+
+          </div>
+        </form>
+      </div></div>
+    </div>
+  </body>
+</html>
